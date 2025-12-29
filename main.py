@@ -4,7 +4,7 @@ from src.model import CIFARCNN
 from src.data_setup import get_loaders
 from src.engine import train_step, test_step
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-epochs = 20
+epochs=18
 train_loader, test_loader = get_loaders(batch_size=64)
 model = CIFARCNN().to(device)
 loss_fn = nn.CrossEntropyLoss()
